@@ -1,2 +1,2 @@
-# Python_HSE_HW
-Python_HSE_HW
+# Python_HW
+ДЗ курса "Прикладной Python" магистратуры ИИ
