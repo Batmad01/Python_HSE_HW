@@ -1,0 +1,4 @@
+asyncio==3.*
+aiogram
+requests
+python-dotenv
