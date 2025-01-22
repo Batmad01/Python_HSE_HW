@@ -3,9 +3,13 @@ from aiogram import Bot, Dispatcher
 from config import BOT_TOKEN
 from handlers import setup_handlers
 from aiogram.fsm.storage.memory import MemoryStorage
+from middlewares import LoggingMiddleware
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
+
+# Настраиваем middleware и обработчики
+dp.message.middleware(LoggingMiddleware())
 setup_handlers(dp)
 
 
