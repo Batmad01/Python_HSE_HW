@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis
+    container_name: fastapi_redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  app:
+    build:
+      context: .
+    container_name: fastapi_app
+    command: ["/docker/app.sh"]
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - redis
+    environment:
+        DB_USER: ${DB_USER}
+        DB_PASS: ${DB_PASS}
+        DB_HOST: ${DB_HOST}
+        DB_PORT: ${DB_PORT}
+        DB_NAME: ${DB_NAME}
+        REDIS_HOST: ${REDIS_HOST}
+        REDIS_PORT: ${REDIS_PORT}

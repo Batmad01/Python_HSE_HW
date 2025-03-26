@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+alembic
+pydantic
+SQLAlchemy
+psycopg2-binary
+python-dotenv
+passlib
+fastapi-users[sqlalchemy]
+gunicorn
+asyncpg
+aiosqlite
+redis
