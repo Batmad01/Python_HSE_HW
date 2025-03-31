@@ -40,3 +40,16 @@ Login и Logout можно произвести через `Authorize` в пра
 ## Запись деплоя и демо сервиса
 
 https://drive.google.com/file/d/1nA7RnD4x-gXJ2T_j8yq_w9b9Kv7SElR2/view?usp=drive_link
+
+## Тесты
+### Отчёт по покрытию сервиса тестами
+
+[html_coverage_report](htmlcov/index.html)
+
+![coverage](https://github.com/user-attachments/assets/09965a28-6efa-4e77-81d6-01b1e9d724a1)
+
+### Нагрузочное тестирование (Locust)
+[locust_report](tests/Locust_report.html)
+
+
+![locust](https://github.com/user-attachments/assets/2bf12e2a-4560-4334-9ca1-28c3744d3838)
